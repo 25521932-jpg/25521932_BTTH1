@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class PhanSo {
+public:
+    int tu, mau;
+
+    void nhap() {
+        cin >> tu >> mau;
+    }
+
+    double giaTri() {
+        return (double)tu / mau;
+    }
+
+    void xuat() {
+        cout << tu << "/" << mau;
+    }
+};
+
+int main() {
+    PhanSo a, b;
+    a.nhap();
+    b.nhap();
+
+    if (a.giaTri() > b.giaTri())
+        a.xuat();
+    else
+        b.xuat();
+}
